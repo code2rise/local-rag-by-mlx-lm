@@ -43,10 +43,10 @@ The `data-processor.py` script executes the following steps:
     	•	Python 3.10+ (check with python3 --version)
     
     2. Install Python dependencies
-       ***upgrade pip***
+       •    upgrade pip**
        python3 -m pip install --upgrade pip
         
-       # install mlx-lm
+       •    install mlx-lm
        python3 -m pip install --upgrade mlx-lm
     4. Hugging Face login (Optional)
        pip install huggingface_hub
