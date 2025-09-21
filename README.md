@@ -32,4 +32,8 @@ The `data-processor.py` script executes the following steps:
 ## Setup & Installation
 
 1.  **Clone the Repository**
+2.  **Installations**
+3.  **References**
+    -    https://colab.research.google.com/github/mrdbourke/simple-local-rag/blob/main/00-simple-local-rag.ipynb#scrollTo=n6XIEJQCP-Jd
+    -    https://github.com/mrdbourke/simple-local-rag?tab=readme-ov-file
     
