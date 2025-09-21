@@ -38,35 +38,43 @@ The `data-processor.py` script executes the following steps:
     This project uses mlx-lm — Apple’s LLM inference library built on MLX for running large language models efficiently on M-series chips.
     
     1. Requirements
-    	•	macOS 14+ (Sonoma or newer recommended)
-    	•	Apple Silicon Mac (M1, M2, M3, M4)
-    	•	Python 3.10+ (check with python3 --version)
+    	-	macOS 14+ (Sonoma or newer recommended)
+    	-	Apple Silicon Mac (M1, M2, M3, M4)
+    	-	Python 3.10+ (check with python3 --version)
     
     2. Install Python dependencies
-    3. upgrade pip**
-       python3 -m pip install --upgrade pip
+    3. upgrade pip
+    ```python
+    python3 -m pip install --upgrade pip
+    ```
         
-    4. install mlx-lm
-       python3 -m pip install --upgrade mlx-lm
+    5. install mlx-lm
+    ```python
+    python3 -m pip install --upgrade mlx-lm
+    ```
     5. Hugging Face login (Optional)
-       pip install huggingface_hub
-       huggingface-cli login
+    ```python
+    pip install huggingface_hub
+    huggingface-cli login
+    ```
     6. Convert & quantize a Hugging Face model - You will have to execute below command in your command prompt
+       ```python
        mlx_lm.convert \
           --hf-path google/gemma-7b-it \
           --mlx-path ~/models/gemma1-7b-it-q4 \
           --quantize \
           --q-bits 4 \
           --q-group-size 64 \
-          --dtype float16
+          --dtype float16 ```
     7. Run generation (CLI) - To make sure that, the Gemma model has been downloaded & configured correctly in your local machine
+       ```python
        mlx_lm.generate \
           --model ~/models/gemma1-7b-it-q4 \
           --prompt "Write 3 lines about the Mumbai monsoon." \
           --max-tokens 120 \
           --temp 0.7 \
           --top-p 0.9 \
-          --top-k 50
+          --top-k 50 ```
        
 4.  **References**
     -    https://colab.research.google.com/github/mrdbourke/simple-local-rag/blob/main/00-simple-local-rag.ipynb#scrollTo=n6XIEJQCP-Jd
